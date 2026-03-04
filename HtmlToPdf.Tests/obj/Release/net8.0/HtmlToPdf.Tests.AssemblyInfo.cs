@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("HtmlToPdf.Tests")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+25ff6c659469071b3cb3e14d0dbec1f6cea73727")]
 [assembly: System.Reflection.AssemblyProductAttribute("HtmlToPdf.Tests")]
 [assembly: System.Reflection.AssemblyTitleAttribute("HtmlToPdf.Tests")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
