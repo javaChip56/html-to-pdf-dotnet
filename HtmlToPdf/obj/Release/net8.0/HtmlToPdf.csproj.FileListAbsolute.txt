@@ -1,0 +1,11 @@
+D:\Projects\Research\uForwarder-main\html-topdf\HtmlToPdf\bin\Release\net8.0\HtmlToPdf.deps.json
+D:\Projects\Research\uForwarder-main\html-topdf\HtmlToPdf\bin\Release\net8.0\HtmlToPdf.dll
+D:\Projects\Research\uForwarder-main\html-topdf\HtmlToPdf\bin\Release\net8.0\HtmlToPdf.pdb
+D:\Projects\Research\uForwarder-main\html-topdf\HtmlToPdf\obj\Release\net8.0\HtmlToPdf.GeneratedMSBuildEditorConfig.editorconfig
+D:\Projects\Research\uForwarder-main\html-topdf\HtmlToPdf\obj\Release\net8.0\HtmlToPdf.AssemblyInfoInputs.cache
+D:\Projects\Research\uForwarder-main\html-topdf\HtmlToPdf\obj\Release\net8.0\HtmlToPdf.AssemblyInfo.cs
+D:\Projects\Research\uForwarder-main\html-topdf\HtmlToPdf\obj\Release\net8.0\HtmlToPdf.csproj.CoreCompileInputs.cache
+D:\Projects\Research\uForwarder-main\html-topdf\HtmlToPdf\obj\Release\net8.0\HtmlToPdf.dll
+D:\Projects\Research\uForwarder-main\html-topdf\HtmlToPdf\obj\Release\net8.0\refint\HtmlToPdf.dll
+D:\Projects\Research\uForwarder-main\html-topdf\HtmlToPdf\obj\Release\net8.0\HtmlToPdf.pdb
+D:\Projects\Research\uForwarder-main\html-topdf\HtmlToPdf\obj\Release\net8.0\ref\HtmlToPdf.dll
