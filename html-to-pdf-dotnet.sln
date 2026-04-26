@@ -1,0 +1,30 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.2.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HtmlToPdf", "HtmlToPdf\HtmlToPdf.csproj", "{CF243605-DDAE-6523-B071-9D7275CD7DEE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HtmlToPdf.Tests", "HtmlToPdf.Tests\HtmlToPdf.Tests.csproj", "{60DCEFBF-E118-0352-39C7-9C3768B77791}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CF243605-DDAE-6523-B071-9D7275CD7DEE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CF243605-DDAE-6523-B071-9D7275CD7DEE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CF243605-DDAE-6523-B071-9D7275CD7DEE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CF243605-DDAE-6523-B071-9D7275CD7DEE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{60DCEFBF-E118-0352-39C7-9C3768B77791}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{60DCEFBF-E118-0352-39C7-9C3768B77791}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{60DCEFBF-E118-0352-39C7-9C3768B77791}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{60DCEFBF-E118-0352-39C7-9C3768B77791}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {FE06F62E-960B-4BA6-B0BA-C9AE8DE932DD}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,77 @@
+name: Test
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+    inputs:
+      run_playwright_tests:
+        description: Run Playwright integration tests
+        required: false
+        default: false
+        type: boolean
+
+permissions:
+  contents: read
+
+jobs:
+  unit-tests:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: 8.0.x
+
+      - name: Restore
+        run: dotnet restore HtmlToPdf.Tests/HtmlToPdf.Tests.csproj
+
+      - name: Run tests
+        run: dotnet test HtmlToPdf.Tests/HtmlToPdf.Tests.csproj --configuration Release --no-restore --logger "trx;LogFileName=test-results.trx"
+
+      - name: Upload test results
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: unit-test-results
+          path: HtmlToPdf.Tests/TestResults/**/*.trx
+          if-no-files-found: ignore
+
+  playwright-tests:
+    if: github.event_name == 'workflow_dispatch' && inputs.run_playwright_tests
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: 8.0.x
+
+      - name: Restore
+        run: dotnet restore HtmlToPdf.Tests/HtmlToPdf.Tests.csproj
+
+      - name: Build tests
+        run: dotnet build HtmlToPdf.Tests/HtmlToPdf.Tests.csproj --configuration Release --no-restore
+
+      - name: Install Playwright browser
+        run: pwsh HtmlToPdf.Tests/bin/Release/net8.0/playwright.ps1 install --with-deps chromium
+
+      - name: Run Playwright integration tests
+        env:
+          HTMLTOPDF_RUN_PLAYWRIGHT_TESTS: true
+        run: dotnet test HtmlToPdf.Tests/HtmlToPdf.Tests.csproj --configuration Release --no-build --logger "trx;LogFileName=playwright-test-results.trx"
+
+      - name: Upload Playwright test results
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: playwright-test-results
+          path: HtmlToPdf.Tests/TestResults/**/*.trx
+          if-no-files-found: ignore

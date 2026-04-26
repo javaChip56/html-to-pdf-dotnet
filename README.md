@@ -98,3 +98,14 @@ Run Playwright integration tests (opt-in):
 ```bash
 HTMLTOPDF_RUN_PLAYWRIGHT_TESTS=true dotnet test HtmlToPdf.Tests/HtmlToPdf.Tests.csproj -c Release -p:RestoreIgnoreFailedSources=true
 ```
+
+## GitHub Actions
+
+The repository includes separate GitHub Actions workflows for build, code review, test, and release:
+
+- `Build`: restores and compiles the library and test projects
+- `Code Review`: verifies formatting and fails on compiler warnings
+- `Test`: runs the standard test suite and supports an opt-in Playwright integration run via manual dispatch
+- `Release`: packs and publishes to NuGet when a Git tag matching `v*` is pushed
+
+For NuGet publishing, configure the repository secret `NUGET_API_KEY` with a NuGet.org API key.

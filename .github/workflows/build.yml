@@ -1,0 +1,31 @@
+name: Build
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: 8.0.x
+
+      - name: Restore
+        run: dotnet restore HtmlToPdf.Tests/HtmlToPdf.Tests.csproj
+
+      - name: Build library
+        run: dotnet build HtmlToPdf/HtmlToPdf.csproj --configuration Release --no-restore
+
+      - name: Build tests
+        run: dotnet build HtmlToPdf.Tests/HtmlToPdf.Tests.csproj --configuration Release --no-restore
